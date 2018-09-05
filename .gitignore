@@ -2,7 +2,6 @@
 *.sdf
 *.suo
 *.user
-*.pfx
 
 # folder during build time
 PART/NX_Part_Pre/x64/

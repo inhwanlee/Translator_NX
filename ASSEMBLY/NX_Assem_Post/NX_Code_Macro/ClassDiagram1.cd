@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NX_Code_Macro.Program" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NX_Code_Macro.Assembly" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="NX_Code_Macro.NewNXfile" FixedFromPoint="true">
+      <Path>
+        <Point X="7.25" Y="3.061" />
+        <Point X="7" Y="3.061" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EAABAIAQQBAICAAAEQIABAAIAAAAABAAAAQAIIAAQAE=</HashCode>
+      <FileName>Assembly.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NX_Code_Macro.NewNXfile" Collapsed="true">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAJAAIAACAA=</HashCode>
+      <FileName>NewNXfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NX_Code_Macro.ConstraintClass" Collapsed="true">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQQAAJAACAAAAgAAAAAAABABAAAAAEAAAAAAA=</HashCode>
+      <FileName>ConstraintClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NX_Code_Macro.CoaxialConstraintClass" Collapsed="true">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>CoaxialConstraintClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

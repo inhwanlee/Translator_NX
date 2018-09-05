@@ -1,7 +1,6 @@
 # solution files
 *.sdf
 *.suo
-*.user
 
 # folder during build time
 PART/NX_Part_Pre/x64/

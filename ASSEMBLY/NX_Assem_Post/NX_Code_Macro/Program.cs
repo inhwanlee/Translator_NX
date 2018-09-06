@@ -63,7 +63,7 @@ namespace NX_Code_Macro
 
             for (int i = 0; i < constraint.NumOfConstraint(AssemManager); i++)
             {
-                GetConstraints[i] = AssemManager.tAssem.Constraints.GetConstraint(i + 1);
+                GetConstraints[i] = AssemManager.tAssem.Constraints.get_Constraint(i + 1);
                 if (i == 0)
                 {
                     ConstraintCoaxial = (TransCAD.StdAssemConstraintCoaxial)GetConstraints[i];

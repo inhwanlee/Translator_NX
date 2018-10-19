@@ -39,10 +39,9 @@ namespace NX_Code_Macro
             AssemManager.loadAssemblyInfo();
 
             AssemManager.FromTransCAD(nxSession);
-            //nxSession = Session.GetSession();
             AssemManager.NXRootFile(nxSession, fileDir);
             AssemManager.ToNXFile(nxSession);
-            //AssemManager.Comparison();
+
        }
     }
 

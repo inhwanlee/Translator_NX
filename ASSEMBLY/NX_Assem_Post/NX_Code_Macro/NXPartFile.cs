@@ -43,7 +43,6 @@ namespace NX_Code_Macro
         {
             Stpfile = nxSession.Parts.OpenDisplay(FileDirectory, out partloadstatus);
             Stpfile = nxSession.Parts.Work;
-            //Stpfile.CoordinateSystems.CreateCoordinateSystem(
             tempbody = nxSession.Parts.Work.Bodies;
             string name = Stpfile.JournalIdentifier.ToString();
             Console.WriteLine(name);

@@ -145,10 +145,6 @@ namespace NX_Code_Macro
                 var getName = new GeometricNames();
                 Console.WriteLine(partnam);
                 int facecount = tcad_PartList[i].Solid.Faces.Count;
-                
-                
-                //for(int p =0 ;p<4;)
-                //{
                     for (int l = 0; l < 2; l++)
                     {
                         for (int k = 1; k < facecount + 1; k++)
@@ -220,8 +216,6 @@ namespace NX_Code_Macro
 
                         }
                     }
-                //}
-
             }
         }
         public void NXRootFile(Session nxSession, NewNXfile fileDir)
@@ -311,33 +305,15 @@ namespace NX_Code_Macro
                         componentConstraint1[k] = (NXOpen.Positioning.ComponentConstraint)constraint1;
                         //componentConstraint1[k].ConstraintAlignment = NXOpen.Positioning.Constraint.Alignment.ContraAlign;
                         componentConstraint1[k].ConstraintType = NXOpen.Positioning.Constraint.Type.Touch;
-
-
                         NXOpen.Face face1 = (NXOpen.Face)component01[0].FindObject(ConstNames1[k]);
-                        //Face face4 = (NXOpen.Face)component01[0].FindObject(ConstNames1[1]);
-                        //NXOpen.Face face1 = (NXOpen.Face)component01.FindObject("PROTO#.Features|EXTRUDE(3)|FACE 130 {(0,0,20) EXTRUDE(3)}");
                         NXOpen.Positioning.ConstraintReference constraintReference1;
                         constraintReference1 = componentConstraint1[k].CreateConstraintReference(component01[0], face1, false, false, false);
-
-
                         component01[1] = (NXOpen.Assemblies.Component)nxSubAssem.ComponentAssembly.RootComponent.FindObject("COMPONENT " + partname[1] + " 1");
                         NXOpen.Face face2 = (NXOpen.Face)component01[1].FindObject(ConstNames2[k]);
                         //Face face3 = (NXOpen.Face)component01[1].FindObject(ConstNames2[1]);
                         NXOpen.Positioning.ConstraintReference constraintReference2;
                         constraintReference2 = componentConstraint1[k].CreateConstraintReference(component01[1], face2, false, false, false);
-
-                        /*
-                        ComponentPositioner componentPositioner2;
-                        componentPositioner2 = nxSubAssem.ComponentAssembly.Positioner;
-                        componentPositioner2.BeginAssemblyConstraints();
-                        Constraint constraint2;
-                        constraint2 = componentPositioner2.CreateConstraint(true);
-                        ComponentConstraint componentConstraint2 = (NXOpen.Positioning.ComponentConstraint)constraint2;
-                        componentConstraint2.ConstraintType = NXOpen.Positioning.Constraint.Type.Touch;
-                        ConstraintReference constraintReference3 = componentConstraint2.CreateConstraintReference(component01[1], face3, true, false, false);
-                        //ConstraintReference constraintReference4 = componentConstraint2.CreateConstraintReference(component01[0], face4, true, false, false);
-                        */
-                        
+     
                     }
                     else 
                     {
@@ -346,26 +322,16 @@ namespace NX_Code_Macro
                         Constraint constraint1;
                         constraint1 = componentPositioner2[k].CreateConstraint(true);
                         componentConstraint2[k] = (NXOpen.Positioning.ComponentConstraint)constraint1;
-                        componentConstraint2[k].ConstraintAlignment = NXOpen.Positioning.Constraint.Alignment.CoAlign;
+                        componentConstraint2[k].ConstraintAlignment = NXOpen.Positioning.Constraint.Alignment.InferAlign;
                         componentConstraint2[k].ConstraintType = NXOpen.Positioning.Constraint.Type.Touch;
-
-
-                        NXOpen.Face face1 = (NXOpen.Face)component01[0].FindObject(ConstNames1[k]);
-                        //Line line1 = nxSubAssem.Lines.CreateFaceAxis(face1, NXOpen.SmartObject.UpdateOption.AfterModeling);
-                        //Face face4 = (NXOpen.Face)component01[0].FindObject(ConstNames1[1]);
-                        //NXOpen.Face face1 = (NXOpen.Face)component01.FindObject("PROTO#.Features|EXTRUDE(3)|FACE 130 {(0,0,20) EXTRUDE(3)}");
+                        NXOpen.Face face1 = (NXOpen.Face)component01[0].FindObject(ConstNames1[k]);                      
                         NXOpen.Positioning.ConstraintReference constraintReference3;
                         constraintReference3 = componentConstraint2[k].CreateConstraintReference(component01[0], face1, false, false, false);
-
-
                         component01[1] = (NXOpen.Assemblies.Component)nxSubAssem.ComponentAssembly.RootComponent.FindObject("COMPONENT " + partname[1] + " 1");
-                        NXOpen.Face face2 = (NXOpen.Face)component01[1].FindObject(ConstNames2[k]);
-                        //Line line2 = nxSubAssem.Lines.CreateFaceAxis(face2, NXOpen.SmartObject.UpdateOption.AfterModeling);
-                        //Face face3 = (NXOpen.Face)component01[1].FindObject(ConstNames2[1]);
+                        NXOpen.Face face2 = (NXOpen.Face)component01[1].FindObject(ConstNames2[k]);                        
                         NXOpen.Positioning.ConstraintReference constraintReference4;
                         constraintReference4 = componentConstraint2[k].CreateConstraintReference(component01[1], face2, false, false, false);
                         constraintReference4.SetFixHint(true);
- 
                     }
             }
             PartSaveStatus fileSave;

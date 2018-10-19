@@ -9,7 +9,7 @@ namespace NX_Code_Macro
     class NewNXfile
     {
         public static string A1_PostFileLocation ;//= "D:\\Macro\\A1post\\";
-        public static string rootAssemFileName = "A01";
+        public static string rootAssemFileName = "A1";
         public static string fileExtension = ".prt";
         public static string x;
         public void initiatefl(string x)
